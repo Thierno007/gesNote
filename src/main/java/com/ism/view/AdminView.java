@@ -18,14 +18,16 @@ public class AdminView {
         return chaine;
     }   
 
-    public static void menu() {
+    public static String menu() {
         System.out.println("1-Cree un Etudiant.");
-        System.out.println("2-liste les etudiant");       
+        System.out.println("2-liste les etudiant");  
+        System.out.println("Quitter.");
+        return saisieChaine("Entre le choix: ");    
     }
 
     public static void showAllEtudiants(List<Etudiant> etudiants){
         for (Etudiant etudiant : etudiants) {
-            etudiant.toString();
+           System.out.println( etudiant.toString());
         }
     }
 
